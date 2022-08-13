@@ -1,0 +1,26 @@
+.services {
+    .service {
+        img {
+            width: 100%;
+            height: 240px;
+            margin: 0 auto 20px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            object-position: center;
+            -o-object-position: center;
+            border-radius: 20px;
+            opacity: 1;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        a:hover {
+            img {
+                opacity: .7;
+            }
+            h3 {
+                color: $base-color-pink;
+            }
+        }
+    }
+}

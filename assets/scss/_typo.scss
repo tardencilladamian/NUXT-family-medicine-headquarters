@@ -1,0 +1,52 @@
+h1, h2, h3, h4, h5, h6, p {
+    line-height: 1.4;
+    padding: 0;
+    margin: 0 0 30px;
+    position: relative;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $base-color-dark;
+    font-family: $font-title;
+}
+
+h1 {font-size: 48px}
+h2 {font-size: 42px}
+h3 {font-size: 38px}
+h4 {font-size: 34px}
+h5 {font-size: 28px}
+h6 {font-size: 22px}
+
+ul, ol {
+    padding: 0 0 0 18px;
+    margin-bottom: 30px;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+a {
+    color: $base-color-pink;
+    text-decoration: none;
+    outline: none;
+}
+
+.space-block {
+    a {
+        font-weight: 700;
+        &:hover {
+            color: $base-color-pink;
+            text-decoration: underline;
+        }
+    }
+    a.btn {
+        font-weight: 500;
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

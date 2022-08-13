@@ -1,0 +1,100 @@
+.footer {
+    background:
+        linear-gradient(
+                rgba(31, 182, 209, .85),
+                darken(rgba(31, 182, 209, 1), 6%)
+        ),
+        url('/images/bg-cta.jpg') no-repeat center;
+    background-size: cover !important;
+
+    section {
+        background: $base-color-dark;
+    }
+    a {
+        color: lighten(rgba(72, 169, 220, .8), 24%);
+        &:hover {
+            color: #fff;
+        }
+    }
+    ul li {
+        .nuxt-link-exact-active.nuxt-link-active {
+            background: transparent;
+            color: $base-color-pink;
+            font-weight: 700;
+        }
+    }
+    ul.custom {
+        list-style-image: none;
+        li {
+            padding: 5px 0 5px 8px;
+            list-style-image: url('/images/li.png');
+        }
+    }
+
+    h4 {
+        color: #fff;
+        font-size: 32px;
+    }
+
+    h6 {
+        font-size: 20px;
+    }
+
+    .about-us {
+        a {
+            color: #fff;
+            &:hover {
+                color: $base-color-pink
+            }
+        }
+        span {
+            display: block;
+        }
+    }
+
+    @include boxBlock(60px, 36px, 8px, 10px);
+
+    .social {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            img {
+                width: 40px;
+                fill: orangered;
+            }
+            a:hover {
+                img {
+                    filter: grayscale(100%);
+                }
+            }
+        }
+    }
+
+    .divide {
+        column-gap: 60px;
+    }
+
+    svg {
+        fill: $base-color-dark;
+    }
+
+    .logo-f img {
+        height: 80px;
+        width: auto;
+    }
+
+}
+
+.legal {
+	background: #fff;
+	color: colorMain(.85);
+	padding: 30px;
+	img {
+		display: inline-block;
+		float: right;
+		height: 34px;
+	}
+}

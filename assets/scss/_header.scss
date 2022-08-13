@@ -1,0 +1,91 @@
+@include boxBlock(60px, 36px, 8px, 30px);
+
+.header {
+    .top {
+        background: $base-color-dark;
+        padding: 8px 0;
+        ul {
+            display: block;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+                font-size: 15px;
+                .image-placeholder {
+                    display: inline;
+                    position: relative;
+                    img {
+                        height: 20px;
+                        position: relative;
+                        top: -2px;
+                        margin-right: 8px;
+                    }
+                }
+                a {
+                    color: rgba(255, 255, 255, .8);
+                    font-weight: 500;
+                    &:hover {
+                        color: $base-color-pink;
+                    }
+                }
+            }
+        }
+        ul.address {
+            li {
+                padding-right: 60px;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        ul.social {
+            text-align: right;
+            li.facebook {
+                img {
+                    height: 18px;
+                }
+            }
+            li.twitter {
+                img {
+                    height: 14px;
+                }
+            }
+            li.youtube {
+                img {
+                    height: 14px;
+                }
+            }
+            li {
+                padding: 0 6px;
+                a {
+                    display: block;
+                    &:hover {
+                        color: lighten($base-color-dark, 12%);
+                        img {
+                            -webkit-filter: opacity(.6);
+                            filter: opacity(.6);
+                        }
+                    }
+                    img {
+                        display: block;
+                    }
+                }
+                .image-placeholder img {
+                    top: 2px;
+                }
+            }
+        }
+    }
+
+    .logo {
+        background: #fff;
+        padding: 10px 0;
+        z-index: 1;
+        img {
+            height: 85px;
+            width: auto;
+        }
+    }
+}

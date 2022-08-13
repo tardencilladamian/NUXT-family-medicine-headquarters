@@ -1,0 +1,23 @@
+.call-to-action {
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+    h2, p {
+        color: #fff;
+    }
+    .btn-primary {
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff !important;
+        @include buttonEffect;
+        &:hover {
+            background: $base-color-pink;
+            border-color: #fff;
+            color: #fff !important;
+        }
+    }
+
+    .btn {
+        color: #fff !important;
+    }
+}

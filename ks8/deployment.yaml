@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: family-medicine-headquarters
+  namespace: production
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: family-medicine-headquarters
+  template:
+    metadata:
+      labels:
+        app: family-medicine-headquarters
+    spec:
+      containers:
+        - name: family-medicine-headquarters
+          image: <IMAGE>
+          env:
+            - name: WEBSITE_NAME
+              value: "Family Medicine Headquarters"
+            - name: WP_API_PAGE
+              value: "http://administration.website-client-3.com/wp-json/wp/v2/pages/"
+            - name: WP_API_PAGE_BY_SLUG
+              value: "http://administration.website-client-3.com/wp-json/wp/v2/pages?slug="
+            - name: WP_API_MENU
+              value: "http://administration.website-client-3.com/wp-json/wp-api-menus/v2/menus/"
+            - name: WP_API_ACF_PAGE
+              value: "http://administration.website-client-3.com/wp-json/acf/v3/pages/"
+            - name: WP_API_ACF_OPTION
+              value: "http://administration.website-client-3.com/wp-json/acf/v3/options/options"
+            - name: WP_API_CONTACT_FORM
+              value: "http://administration.website-client-3.com/wp-json/contact-form-7/v1/contact-forms/181/feedback"
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "50m"
+            limits:
+              memory: "256Mi"
+              cpu: "100m"

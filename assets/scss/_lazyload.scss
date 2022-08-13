@@ -1,0 +1,18 @@
+.image-placeholder {
+  overflow: hidden;
+  line-height: 0;
+  &--rounded {
+    border-radius: 100%;
+  }
+}
+img {
+  transition: all ease 0.3s;
+  opacity: 1;
+  &[lazy="loading"] {
+    opacity: 1;
+    filter: blur(2px);
+  }
+  &[lazy="loaded"] {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,70 @@
+.btn {
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: $base-font-size - 1px;
+    line-height: 1;
+    outline: none !important;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    @include buttonEffect;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn-primary {
+    background: $base-color-pink;
+    border-color: $base-color-pink;
+    &:hover {
+        background: darken($base-color-pink, 6%);
+        border-color: $base-color-pink;
+        text-decoration: none;
+    }
+    &:focus,
+    &:active {
+        background: darken($base-color-pink, 6%);
+    }
+}
+
+.form-control {
+    background-color: #fafcfd;
+    border: 1px solid #eaf0f4;
+    border-radius: 8px;
+    height: 52px;
+    padding: 0 12px;
+    margin-bottom: 20px;
+    &:focus {
+        border-color: $base-color-blue;
+        box-shadow: none !important;
+    }
+}
+
+textarea.form-control {
+    min-height: 140px;
+    height: 140px;
+    max-height: 140px;
+    padding: 12px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group .error {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    color: rgba(255, 22, 0, .9) !important;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400 !important;
+    opacity: .9;
+}
+
+.spinner {
+    padding-top: 11px !important;
+    padding-bottom: 15px !important;
+    top: 0 !important;
+}

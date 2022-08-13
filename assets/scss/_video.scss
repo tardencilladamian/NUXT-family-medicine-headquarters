@@ -1,0 +1,122 @@
+.video-block {
+    a {
+        display: block;
+        position: relative;
+        svg {
+            position: absolute;
+            top: 50%;
+            width: 140px;
+            height: 140px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.circle {
+    stroke: $base-color-pink;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    -webkit-transition: all 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.playBut {
+    /*  border: 1px solid red;*/
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+
+    .triangle {
+        -webkit-transition: all 0.7s ease-in-out;
+        stroke-dasharray: 240;
+        stroke-dashoffset: 480;
+        stroke: $base-color-pink;
+        transform: translateY(0)
+    }
+
+
+    &:hover {
+
+        .triangle {
+            stroke-dashoffset: 0;
+            opacity: 1;
+            stroke: $base-color-pink;
+            animation: nudge 0.7s ease-in-out;
+
+            //@keyframes nudge{
+            //    0% {
+            //        transform: translateX(0)
+            //    }
+            //    30% {
+            //        transform: translateX(-5px)
+            //    }
+            //    50% {
+            //        transform: translateX(5px)
+            //    }
+            //    70% {
+            //        transform: translateX(-2px)
+            //    }
+            //    100% {
+            //        transform: translateX(0)
+            //    }
+            //}
+        }
+
+        .circle {
+            stroke-dashoffset: 0;
+            opacity: 1;
+        }
+    }
+}
+
+.column {
+    margin: 0;
+    padding: 0;
+}
+.column:last-child {
+    padding-bottom: 0;
+}
+.column::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.column div {
+    position: relative;
+    float: left;
+    width: 100% !important;
+    //height: 200px;
+    //margin: 0 0 0 25px;
+    padding: 0;
+}
+.column div:first-child {
+    margin-left: 0;
+}
+
+figure {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100% !important;
+}
+.hover06 figure img {
+    display: block;
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+    opacity: .8;
+    object-fit: cover;
+    object-position: center;
+    width: 100% !important;
+    height: 380px;
+    border-radius: 20px;
+}
+.hover06 figure:hover img {
+    -webkit-transform: rotate(2deg) scale(1.05);
+    transform: rotate(2deg) scale(1.05);
+    opacity: .5;
+}

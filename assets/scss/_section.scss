@@ -1,0 +1,31 @@
+body,
+section {
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section>[class*="container"] {
+    padding-bottom: $section-padding-top-bottom-pc;
+    padding-top: $section-padding-top-bottom-pc;
+}
+
+section>[class*="container-fluid"] {
+    padding: 0;
+    .space {
+        padding: 0 100px;
+    }
+}
+
+.footer {
+    section>[class*="container"] {
+        padding-bottom: $section-padding-top-bottom-pc;
+        padding-top: $section-padding-top-bottom-mobil;
+    }
+}

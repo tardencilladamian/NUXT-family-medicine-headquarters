@@ -1,0 +1,43 @@
+$font-global: 'Jost', sans-serif;
+$font-title: 'Poppins', sans-serif;
+
+$base-font-size: 18px;
+$base-line-height: 1.6;
+
+$base-color-gold: rgba(208, 164, 56, 1);
+$base-color-gray: rgba(239, 245, 247, 1);
+$base-color-dark: rgba(0, 7, 53, 1);
+$base-color-pink: rgba(214, 77, 144, 1);
+$base-color-blue: rgba(31, 182, 209, 1);
+
+@function colorMain($opacity) {
+	@return rgba(3, 47, 88, $opacity);
+}
+
+@mixin buttonEffect {
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+@mixin boxBlock($padding-left, $img-width, $img-top, $margin-bottom) {
+    .box-block {
+        position: relative;
+        padding-left: $padding-left;
+        margin-bottom: $margin-bottom;
+        .icon-box {
+            position: absolute;
+            left: 0;
+            top: $img-top;
+            img {
+                width: $img-width;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+$section-padding-top-bottom-pc: 80px;
+$section-padding-top-bottom-tablet: 60px;
+$section-padding-top-bottom-mobil: 40px;

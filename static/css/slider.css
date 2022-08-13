@@ -1,0 +1,106 @@
+.slider {
+  position: relative;
+  z-index: 1;
+  overflow: hidden !important;
+  height: 660px !important;
+}
+.slider .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.slider .video {
+  width: 100% !important;
+  height: 660px !important;
+  background-size: cover !important;
+  object-fit: cover !important;
+  -o-object-fit: cover !important;
+  object-position: center !important;
+  -o-object-position: center !important;
+  position: relative;
+  overflow: hidden !important;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 660px !important;
+  z-index: 99;
+  width: 100% !important;
+  display: block;
+  overflow: hidden !important;
+  /* background: rgb(72, 171, 222);
+  background: -moz-linear-gradient(
+    82deg,
+    rgba(72, 171, 222, 0.6) 0%,
+    rgba(224, 162, 201, 0.6) 100%
+  );
+  background: -webkit-linear-gradient(82deg, rgba(72, 171, 222, 0.6) 100%);
+  background: linear-gradient(
+    82deg,
+    rgba(72, 171, 222, 0.6) 0%,
+    rgba(224, 162, 201, 0.6) 100%
+  ); */
+  background: url("https://hartunian-law-firm.s3-us-west-1.amazonaws.com/assets/images/grid-2.png")
+    repeat center;
+}
+
+.slider .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 200px 0;
+}
+
+.slider h1,
+.slider h3,
+.slider h6 {
+  color: #fff;
+  text-shadow: 0 2px 0 #000;
+}
+
+.slider h1 {
+  font-size: 56px;
+  line-height: 1.2;
+}
+.slider h3 {
+  font-size: 22px;
+}
+
+@media (max-width: 991px) {
+  .slider h1 {
+    font-size: 70px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider h1 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+}
+
+.slider .max-w {
+  max-width: 900px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.call-to-action .btn-primary {
+  background: #fff;
+  color: #000735 !important;
+}
+
+.bg-office {
+  background: url("https://family-medicine-headquarters.s3-us-west-1.amazonaws.com/home2/wzebziteclient3/administration.website-client-3.com/wp-content/uploads/2022/08/FMHQ-21.jpg")
+    no-repeat center;
+  background-size: cover;
+}

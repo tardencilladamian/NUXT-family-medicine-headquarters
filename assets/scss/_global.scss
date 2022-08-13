@@ -1,0 +1,130 @@
+body {
+    background: #fff;
+    color: #3f5f7f;
+    display: flex;
+    font-family: $font-global;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    height: 100vh;
+    min-width: 400px;
+    min-height: 400px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.bg-gray { background: $base-color-gray; }
+
+.divide, .divide1, .divide2, .divide3, .divide4 {
+    -moz-column-gap: normal;
+    -webkit-column-gap: normal;
+    column-gap: normal;
+    -moz-column-fill: balance !important;
+    -webkit-column-fill: balance !important;
+    column-fill: balance !important;
+}
+.divide { column-count: 2; -moz-column-count: 2; -webkit-column-count: 2; }
+.divide2 { column-count: 2; -moz-column-count: 2; -webkit-column-count: 2; }
+.divide3 { column-count: 3; -moz-column-count: 3; -webkit-column-count: 3; }
+.divide4 { column-count: 4; -moz-column-count: 4; -webkit-column-count: 4; }
+
+.divide.gap {
+    column-gap: 0;
+}
+
+.mb-20 { margin-bottom: 20px }
+.mb-25 { margin-bottom: 25px }
+.mb-30 { margin-bottom: 30px }
+.mb-35 { margin-bottom: 35px }
+.mb-40 { margin-bottom: 40px }
+.mb-45 { margin-bottom: 45px }
+.mb-50 { margin-bottom: 50px }
+.mb-55 { margin-bottom: 55px }
+.mb-60 { margin-bottom: 60px }
+
+.pt-30 { padding-top: 30px; }
+
+iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+
+.map-our-location {
+    iframe {
+        height: 520px;
+    }
+}
+
+.home-review {
+    background: $base-color-dark;
+    background:
+        linear-gradient(
+                rgba(0, 7, 53, .90),
+                rgba(0, 7, 53, .96)
+        ),
+        url('/images/bg-cta.jpg') no-repeat center;
+    background-size: cover !important;
+    section {
+        .container {
+            padding-top: 0;
+            .review {
+                color: lighten(rgba(72, 169, 220, .8), 24%);
+                border-left: 4px solid $base-color-pink;
+                padding-left: 40px;
+                h6 {
+                    color: #fff;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
+
+.team {
+    h3 {
+        font-size: 19px;
+        font-weight: 700;
+    }
+    img {
+        border-radius: 20px;
+        margin-bottom: 20px;
+        opacity: .1 !important;
+    }
+}
+
+.testimonials {
+    .testimonial {
+        background: #fff;
+        border-radius: 20px;
+        padding: 40px;
+        position: relative;
+        img {
+            position: absolute;
+            height: 60px;
+            right: -30px;
+            top: -30px;
+        }
+    }
+}
+
+.faqs {
+    .faq {
+        h6 {
+            border-bottom: 1px solid darken($base-color-gray, 8%);
+            padding-bottom: 14px;
+        }
+    }
+}
+
+.slider {
+    h1 {
+        display: block;
+        line-height: 1.2;
+        margin-bottom: 30px !important;
+        color: #49abde;
+    }
+    .p-slider {
+        padding: 120px 0;
+    }
+}

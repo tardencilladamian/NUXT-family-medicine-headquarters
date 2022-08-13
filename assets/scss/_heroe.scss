@@ -1,0 +1,20 @@
+.heroe {
+    background:
+        linear-gradient(
+                rgba(31, 182, 209, .7),
+                rgba(31, 182, 209, .7)
+        ),
+        url('/images/bg-cta.jpg') no-repeat center;
+    background-size: cover !important;
+
+    padding: 40px 0;
+
+    h1, p {
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 52px;
+        line-height: 1.2;
+    }
+}

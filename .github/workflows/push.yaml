@@ -1,0 +1,39 @@
+name: Build, push, and deploy to Kubernetes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ee222e2d3ba4e5111a81d39103116d47e91d3c395b5c2b9c14e78ef67666b196
+
+      - name: Build container image
+        run: docker build -t registry.digitalocean.com/container-registry-ks8/family-medicine-headquarters:$(echo $GITHUB_SHA | head -c7) .
+
+      - name: Log in to DigitalOcean Container Registry
+        run: doctl registry login --expiry-seconds 1200
+
+      - name: Push image latest to DigitalOcean Container Registry
+        run: docker push registry.digitalocean.com/container-registry-ks8/family-medicine-headquarters:$(echo $GITHUB_SHA | head -c7)
+
+      - name: Update deployment file
+        run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/container-registry-ks8/family-medicine-headquarters:'${TAG}'|' $GITHUB_WORKSPACE/ks8/deployment.yaml
+
+      - name: Save DigitalOcean kubeconfig with short-lived credentials
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 1200 k8s-websites-apps-2021
+
+      - name: Deploy to DigitalOcean Kubernetes
+        run: kubectl apply -f $GITHUB_WORKSPACE/ks8/deployment.yaml
+
+      - name: Verify deployment
+        run: kubectl rollout status deployment family-medicine-headquarters --namespace=production
