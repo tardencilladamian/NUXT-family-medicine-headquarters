@@ -41,11 +41,11 @@ export default {
 
   modules: ["@nuxtjs/axios", "@nuxtjs/pwa", "@nuxtjs/sitemap"],
 
-  styleResources: {
-    scss: ["~/assets/scss/main.scss"],
-  },
+  // styleResources: {
+  //   scss: ["~/assets/scss/main.scss"],
+  // },
 
-  css: ["~/assets/scss/main.scss"],
+  // css: ["~/assets/scss/main.scss"],
 
   loading: {
     color: "#db5b9d",
